@@ -1,7 +1,7 @@
 import styles from "./CartButton.module.css"
 
 const CartButton = (props) => {
-  const numberOfCartItems = 1;
+  const numberOfCartItems = 0;
 
   return (
     <button className={styles.button} onClick={props.onClick}>

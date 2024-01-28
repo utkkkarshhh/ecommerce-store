@@ -3,15 +3,16 @@ import styles from "./Header.module.css";
 // import amazonLogo from "../../Assets/images/Amazon.png";
 import { MdSearch } from "react-icons/md";
 import CartButton from "../Cart/CartButton";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const userName = "Utkarsh";
 
   return (
     <header className={styles.header}>
-      <div className={styles.brand}>
+      <Link to="/" className={styles.brand}>
         <p>E-COMMERCE STORE</p>
-      </div>
+      </Link>
       <div className={styles.searchBar}>
         <div className={styles.left}>
           <select name="All" id="category">
@@ -31,13 +32,13 @@ const Header = (props) => {
         </div>
       </div>
       <div className={styles.userActions}>
-        <div className={styles.signIn}>
+        <Link to="/login" className={styles.signIn}>
           Hello <b>{userName}</b>,<br></br> Sign out
-        </div>
+        </Link>
         <div className={styles.order}>Orders</div>
-        <div className={styles.cart}>
+        <Link to="/cart" className={styles.cart}>
           <CartButton />
-        </div>
+        </Link>
       </div>
     </header>
   );

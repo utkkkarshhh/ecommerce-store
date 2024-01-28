@@ -6,7 +6,6 @@ import CartItemsCard from "./CartItemsCard";
 const Cart = () => {
   return (
     <div className={styles.body}>
-      <Header />
       <div className={styles.CartCard}>
         <CartItemsCard />
         <CartTotalCard />

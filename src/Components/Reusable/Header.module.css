@@ -77,4 +77,16 @@
 
 .cart {
   margin: auto 20px auto 10px;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color:rgb(221, 217, 217); 
+  text-decoration:none; 
+  cursor:pointer;  
 }
