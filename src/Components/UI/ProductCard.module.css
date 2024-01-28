@@ -1,0 +1,60 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  z-index: 1;
+  margin: 10px;
+  justify-content: flex-end;
+  max-height: 400px;
+  min-width: 100px;
+}
+
+p {
+  margin: 5px 5px;
+}
+
+.productTitle{
+  font-weight: 700;
+}
+
+.productImage img {
+  max-height: 200px;
+}
+
+.button button {
+  background-color: #fcd200;
+  color: black;
+  border: none;
+  padding: 10px 30px;
+  border-bottom-left-radius: 99px;
+  border-bottom-right-radius: 99px;
+  border-top-right-radius: 99px;
+  border-top-left-radius: 99px;
+  font-weight: 600;
+}
+
+.price {
+  color: rgb(168, 65, 65);
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+.ratings{
+  display:inline-flex;
+  margin: 0;
+}
+
+.price .currency {
+  font-size: 12px;
+  padding-right: 2px;
+}
+
+.price .adjustedMoney {
+  font-size: 12px;
+  padding-left: 1px;
+  text-align: start;
+}

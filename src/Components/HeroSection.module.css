@@ -1,0 +1,33 @@
+.heroImage {
+    position: relative;
+    height: 50vh;
+    width: fit-content;
+    width: 100%;
+    margin-bottom: -150px;
+    -webkit-mask-image: linear-gradient(180deg,#000,transparent);
+    mask-image: linear-gradient(180deg,#000,transparent);
+}
+
+.heroImage img{
+    width: 100%;
+    object-fit: cover;
+}
+  
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
