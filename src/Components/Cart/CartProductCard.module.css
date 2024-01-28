@@ -1,0 +1,52 @@
+.productCard {
+  display: flex;
+}
+
+.productImage img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.productInfo .productName {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.productInfo .productPrice {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(168, 65, 65);
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.currency {
+  font-size: 12px;
+  margin-right: 2px;
+}
+
+.adjustedMoney {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.ratings {
+  display: inline-flex;
+  margin: 0;
+}
+
+.actionButtons{
+    margin-top: 10px;
+}
+
+.actionButtons button{
+    padding: 10px 25px;
+    font-weight: bold;
+    background-color: #febd69;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+}

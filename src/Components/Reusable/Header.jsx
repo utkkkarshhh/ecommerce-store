@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 // import amazonLogo from "../../Assets/images/Amazon.png";
 import { MdSearch } from "react-icons/md";
-import CartButton from "./CartButton";
+import CartButton from "../Cart/CartButton";
 
 const Header = (props) => {
   const userName = "Utkarsh";

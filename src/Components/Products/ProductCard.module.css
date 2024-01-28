@@ -7,7 +7,6 @@
   background-color: white;
   z-index: 1;
   margin: 10px;
-  justify-content: flex-end;
   max-height: 400px;
   min-width: 100px;
 }
@@ -21,6 +20,7 @@ p {
 }
 
 .productImage img {
+  height: auto;
   max-height: 200px;
 }
 

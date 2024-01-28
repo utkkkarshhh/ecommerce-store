@@ -1,0 +1,17 @@
+.CartItemsCard {
+  background-color: white;
+  color: black;
+  display: flex;
+  font-size: 12px;
+  flex-direction: column;
+  border-radius: 1%;
+  width: 80%;
+  margin: 20px 20px;
+  padding: 20px 20px;
+}
+
+.heading {
+  font-weight: bold;
+  text-align: left;
+  font-size: 25px;
+}

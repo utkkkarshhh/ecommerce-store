@@ -32,7 +32,7 @@ const HeroSection = () => {
         </div>
         <img
           src={images[currentImageIndex]}
-          alt={`Hero Image ${currentImageIndex + 1}`}
+          alt={`Hero Depiction ${currentImageIndex + 1}`}
         />
         <div className={styles.nextButton} onClick={handleNextImage}>
           <GrNext />

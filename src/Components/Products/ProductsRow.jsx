@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ProductsRow.module.css";
-import ProductCard from "./UI/ProductCard";
+import ProductCard from "./ProductCard";
 
 const ProductRow = () => {
   return (

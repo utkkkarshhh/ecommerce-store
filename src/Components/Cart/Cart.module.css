@@ -1,0 +1,9 @@
+.body{
+    background-color: rgb(212, 211, 211);
+    height: 100vh;
+}
+
+.CartCard{
+    display: flex;
+    flex-direction: row;
+}
