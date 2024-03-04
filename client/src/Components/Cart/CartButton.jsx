@@ -1,7 +1,12 @@
-import styles from "./CartButton.module.css"
+import React, { useContext } from "react";
+import styles from "./CartButton.module.css";
+import CartContext from "../Store/CartContext";
 
 const CartButton = (props) => {
-  const numberOfCartItems = 0;
+  const cartCtx = useContext(CartContext);
+  const numberOfCartItems = cartCtx.items.reduce((currentNumber, item) => {
+    return currentNumber + item.amount;
+  }, 0);
 
   return (
     <button className={styles.button} onClick={props.onClick}>

@@ -1,6 +1,17 @@
 .row {
   display: flex;
-  z-index: 1;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .row{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productsRow{
+    align-items: center;
+  }
 }

@@ -10,7 +10,6 @@ const RegisterCard = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
   const registerUserHandler = async (event) => {
     event.preventDefault();
 
