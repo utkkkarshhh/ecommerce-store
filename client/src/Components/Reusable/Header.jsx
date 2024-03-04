@@ -5,11 +5,12 @@ import CartButton from "../Cart/CartButton";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../Store/AuthContext";
 import axios from "axios";
+import HeaderAvatar from "./HeaderAvatar";
+import MobileCart from "../Cart/MobileCart";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState("");
-
+  const [userName, setUserName] = useState("Utkarsh");
   const { isAuthenticated } = useContext(AuthContext);
 
   useEffect(() => {
@@ -46,7 +47,9 @@ const Header = () => {
       {isAuthenticated ? (
         <header className={styles.header}>
           <div className={styles.brand}>
-            <p>E-COMMERCE STORE</p>
+            <Link to="/home">
+              <p className={styles.logo}>E-COMMERCE STORE</p>
+            </Link>
           </div>
           <div className={styles.searchBar}>
             <div className={styles.left}>
@@ -61,16 +64,31 @@ const Header = () => {
               <input type="text" placeholder="Search for products" />
             </div>
             <div className={styles.right}>
-              <button type="submit">
+              <button className={styles.searchbarSearchButton} type="submit">
                 <MdSearch style={{ fontSize: "24px", color: "black" }} />
               </button>
             </div>
           </div>
+          {/* Mobile view */}
+          <div className={styles.mobileMenu}>
+            <span className={styles.avatar}>
+              <HeaderAvatar />
+            </span>
+            <span>
+              <MobileCart />
+            </span>
+          </div>
+          {/* Desktop view */}
           <div className={styles.userActions}>
             <div onClick={logOutHandler} className={styles.logOut}>
-              Hello <b>{userName}</b>,<br /> Log out
+              Hello <b>{userName}</b>,<br /> <Link to="/login">Log out</Link>
             </div>
-            <div className={styles.order}>Orders</div>
+            <div
+              className={styles.order}
+              onClick={() => alert("Working on it")}
+            >
+              Orders
+            </div>
             <Link to="/cart" className={styles.cart}>
               <CartButton />
             </Link>
@@ -81,9 +99,13 @@ const Header = () => {
           <div className={styles.brand}>
             <p>E-COMMERCE STORE</p>
           </div>
-          <div className={styles.userActions}>
-            <button className={styles.logoutPageButtons}>Sign up</button>
-            <button className={styles.logoutPageButtons}>Login</button>
+          <div className={styles.userActionsUnauthenticated}>
+            <Link to="/register">
+              <button className={styles.logoutPageButtons}>Sign up</button>
+            </Link>
+            <Link to="/login">
+              <button className={styles.logoutPageButtons}>Login</button>
+            </Link>
           </div>
         </div>
       )}

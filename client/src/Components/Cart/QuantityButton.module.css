@@ -1,0 +1,60 @@
+.quantityInputButton {
+  margin: auto 10px;
+}
+
+.qtyButtonLeft {
+  background-color: rgb(190, 190, 190);
+  padding-left: 15px;
+  border: none;
+  margin: 0px 0px;
+  border-radius: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0px;
+  height: 30px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.qtyButtonRight {
+  background-color: rgb(190, 190, 190);
+  padding-right: 15px;
+  border: none;
+  margin: 0px 0px;
+  border-radius: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0px;
+  height: 30px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.quantityInput {
+  font-family: Poppins;
+  padding: 2.5px;
+  text-align: center;
+  margin: 0px;
+  width: 40px;
+  font-weight: 400;
+  border: none;
+  height: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .quantityInput{
+    width: 12px;
+    height: 25px;
+    border-radius: none;
+  }
+  .qtyButtonRight {
+    padding-right: 6px;
+  }
+  .qtyButtonLeft{
+    padding-left: 6px;
+  }
+}

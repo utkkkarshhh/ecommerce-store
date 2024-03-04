@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import Header from "./Components/Reusable/Header";
 import Home from "./Components/pages/Home";
 import Login from "./Components/pages/Login";
 import Register from "./Components/pages/Register";
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <CartProvider>
+      <Header />
       <Routes>
         <Route path="/" element={<Layout />} />
 

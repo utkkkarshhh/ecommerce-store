@@ -16,7 +16,7 @@ const ProductRow = () => {
         />
         <ProductCard
           id="2"
-          name="Wireless Over Ear ANC Headphones with Mic, Upto 70 Hrs Playtime)"
+          name="Wireless Over Ear ANC Headphones with Mic, Upto 70 Hrs Playtime"
           price="59"
           cents="95"
           rating={3}

@@ -1,7 +1,12 @@
+import React, { useContext } from "react";
+import CartContext from "../Store/CartContext";
 import styles from "./CartItemsCard.module.css";
 import CartProductCard from "./CartProductCard";
 
+
 const CartItemsCard = (props) => {
+  const cartCtx = useContext(CartContext);
+
   return (
     <div className={styles.CartItemsCard}>
       <div className={styles.header}>
@@ -9,14 +14,17 @@ const CartItemsCard = (props) => {
         <hr></hr>
       </div>
       <div className={styles.productsInCart}>
-        <CartProductCard
-          id="1"
-          name="Smart Watch with Bluetooth Calling, 240 * 280 Pixel High Resolution"
-          price="99"
-          cents="99"
-          rating={5}
-          image="https://ongpng.com/wp-content/uploads/2023/03/4.Fire-Boltt-Ninja_1500x1500.png"
-        />
+        {cartCtx.cartItems.map((cartItem, i) => (
+          <CartProductCard
+            key={i}
+            id={cartItem.id}
+            name={cartItem.name}
+            price={cartItem.price}
+            cents={cartItem.cents}
+            rating={cartItem.rating}
+            image={cartItem.image}
+          />
+        ))}
       </div>
     </div>
   );

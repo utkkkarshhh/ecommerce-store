@@ -1,33 +1,52 @@
 .heroImage {
-    position: relative;
-    height: 50vh;
-    width: fit-content;
-    width: 100%;
-    margin-bottom: -150px;
-    -webkit-mask-image: linear-gradient(180deg,#000,transparent);
-    mask-image: linear-gradient(180deg,#000,transparent);
+  position: relative;
+  height: 50vh;
+  width: fit-content;
+  width: 100%;
+  margin-bottom: -150px;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent);
+  mask-image: linear-gradient(180deg, #000, transparent);
+  z-index: -1;
 }
 
-.heroImage img{
-    width: 100%;
-    object-fit: cover;
+.heroImage img {
+  width: 100%;
+  object-fit: cover;
 }
-  
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .heroImage {
+    height: 35vh;
+    width: 100%;
+    overflow: hidden;
+  }
   .prevButton,
   .nextButton {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2em;
-    cursor: pointer;
-    color: white;
+    top: 30%;
   }
-  
-  .prevButton {
-    left: 10px;
+  .heroImage img {
+    padding-top: 25px;
+    width: 100%;
+    object-fit: scale-down;
+    transform: scale(1.4);
   }
-  
-  .nextButton {
-    right: 10px;
-  }
-  
+}

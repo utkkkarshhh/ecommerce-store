@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./ProductCard.module.css";
+import CartContext from "../Store/CartContext";
 
 const ProductCard = (props) => {
+  const cartCtx = useContext(CartContext);
+
   const addToCartHandler = () => {
-    console.log("Product added to cart:", {
+    cartCtx.addItem({
+      id: props.id,
       name: props.name,
-      price: `${props.price}.${props.cents}`,
-      rating: props.rating,
+      price: props.price,
+      cents: props.cents,
       image: props.image,
     });
   };
@@ -32,8 +36,13 @@ const ProductCard = (props) => {
       <div className={styles.productImage}>
         <img src={props.image} alt="Product Depiction"></img>
       </div>
-      <div className={styles.button}>
-        <button onClick={addToCartHandler}>Add to cart</button>
+      <div className={styles.productCardButton}>
+        <button
+          className={styles.productCardAddToCardButton}
+          onClick={addToCartHandler}
+        >
+          Add to cart
+        </button>
       </div>
     </div>
   );

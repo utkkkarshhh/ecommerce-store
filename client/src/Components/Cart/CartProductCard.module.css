@@ -1,10 +1,14 @@
 .productCard {
   display: flex;
+  background-color: rgb(232, 229, 229);
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 12px;
 }
 
 .productImage img {
-  max-width: 200px;
-  max-height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .productInfo .productName {
@@ -35,18 +39,53 @@
   margin: 0;
 }
 
-.actionButtons{
-    margin-top: 10px;
+.actionButtons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.actionButtons button{
-    padding: 10px 25px;
+.actionButtons .cartProductCardRemoveItem {
+  padding: 10px 25px;
+  font-weight: bold;
+  background-color: #febd69;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .productImage img {
+    margin: auto;
+    max-width: 150px;
+    max-height: 120px;
+  }
+  .productInfo .productName {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .actionButtons {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    align-items: center;
+  }
+
+  .actionButtons .cartProductCardRemoveItem {
+    font-size: 8px;
     font-weight: bold;
     background-color: #febd69;
     color: black;
-    margin-top: 10px;
-    margin-bottom: 10px;
     border: none;
     outline: none;
     border-radius: 12px;
+  }
+  .ratings p {
+    margin-bottom: 0;
+  }
 }

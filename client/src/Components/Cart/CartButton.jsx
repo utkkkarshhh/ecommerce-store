@@ -4,12 +4,13 @@ import CartContext from "../Store/CartContext";
 
 const CartButton = (props) => {
   const cartCtx = useContext(CartContext);
-  const numberOfCartItems = cartCtx.items.reduce((currentNumber, item) => {
-    return currentNumber + item.amount;
-  }, 0);
+  const numberOfCartItems = cartCtx.cartItems.length;
+  // reduce((currentNumber, item) => {
+  //   return currentNumber + item.quantity;
+  // }, 0);
 
   return (
-    <button className={styles.button} onClick={props.onClick}>
+    <button className={styles.cartButton} onClick={props.onClick}>
       <span className={styles.icon}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

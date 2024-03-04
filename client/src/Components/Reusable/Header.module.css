@@ -8,7 +8,7 @@
   padding-right: 20px;
 }
 
-.brand p {
+.logo {
   padding-top: 10px;
   height: 30px;
   width: auto;
@@ -50,7 +50,7 @@
   outline: none;
 }
 
-.searchBar .right button {
+.searchBar .right .searchbarSearchButton {
   background-color: #febd69;
   height: 45px;
   padding: 1px 10px;
@@ -107,6 +107,7 @@ a:hover {
   font-family: Poppins;
   font-weight: bold;
   border-radius: 12px;
+  color: black;
   border: none;
   background-color: #febd69;
   height: 50%;
@@ -119,6 +120,11 @@ a:hover {
 
 .logoutPageButtons:hover {
   background-color: white;
+  color: black;
+}
+
+.mobileMenu {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -126,5 +132,50 @@ a:hover {
     height: 30%;
     padding: 10px 15px;
     margin: auto 10px;
+  }
+
+  .header {
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .userActions {
+    display: none;
+  }
+
+  .searchBar {
+    width: 100%;
+    margin: auto 10px auto 5px;
+  }
+
+  .search input {
+    border-radius: 0px;
+  }
+
+  .searchBar .left select {
+    font-family: Poppins;
+    width: 40px;
+    height: 45px;
+    font-size: 10px;
+    background-color: #e6e6e6;
+    color: rgb(45, 45, 45);
+    border: none;
+    outline: none;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+  }
+
+  .mobileMenu {
+    display: contents;
+    cursor: pointer;
+  }
+
+  .avatar{
+    margin-right: 20px;
+    margin-left: 10px;
   }
 }

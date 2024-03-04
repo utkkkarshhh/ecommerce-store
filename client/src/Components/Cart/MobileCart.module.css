@@ -1,0 +1,18 @@
+.mobileCart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  position: absolute;
+  top: -13px;
+  right: -5px;
+  background-color: #febd69;
+  color: black;
+  border-radius: 12px;
+  padding: 3px 6px;
+  font-size: 9px;
+  font-weight: 600;
+}

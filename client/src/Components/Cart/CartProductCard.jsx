@@ -1,9 +1,11 @@
+import React from "react";
 import styles from "./CartProductCard.module.css";
+import QuantityButton from "./QuantityButton";
 
 const CartProductCard = (props) => {
-  const itemRemovalHandler = (event) =>{
+  const itemRemovalHandler = (event) => {
     console.log(event);
-  }
+  };
   return (
     <div className={styles.productCard}>
       <div className={styles.productImage}>
@@ -24,11 +26,16 @@ const CartProductCard = (props) => {
             ))}
         </p>
         <div className={styles.actionButtons}>
-          <button onClick={itemRemovalHandler}>Remove Item</button>
+          <button
+            className={styles.cartProductCardRemoveItem}
+            onClick={itemRemovalHandler}
+          >
+            Remove Item
+          </button>
+          <QuantityButton></QuantityButton>
         </div>
       </div>
     </div>
-    
   );
 };
 

@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "../Reusable/Header";
 import Cart from "../Cart/Cart";
+import "../../App.css";
 
 const CartPage = () => {
   return (
-    <div>
-      <Header />
+    <div className="cartPage">
       <Cart />
     </div>
   );
