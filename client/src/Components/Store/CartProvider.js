@@ -3,26 +3,33 @@ import CartContext from "./CartContext";
 import { initialCartState, cartReducer } from "./CartReducer";
 
 const CartProvider = ({ children }) => {
-  const [cartState, disptachCartAction] = useReducer(
+  const [cartState, dispatchCartAction] = useReducer(
     cartReducer,
     initialCartState
   );
 
-  const addItemHandler = (item) => {
-    disptachCartAction({
-      type: "ADD",
-      payload: item,
-    });
+  const addItemToCart = (item) => {
+    dispatchCartAction({ type: "ADD_ITEM", payload: item });
   };
-  const removeItemHandler = (id) => {
-    disptachCartAction({ type: "REMOVE", payload: id });
+
+  const removeItemFromCart = (id) => {
+    dispatchCartAction({ type: "REMOVE_ITEM", payload: id });
+  };
+
+  const increaseQuantityOfAItem = (id) => {
+    dispatchCartAction({ type: "INCREASE_QUANTITY", payload: id });
+  };
+
+  const decreaseQuantityOfAItem = (id) => {
+    dispatchCartAction({ type: "DECREASE_QUANTITY", payload: id });
   };
 
   const context = {
     cartItems: cartState.cartItems,
-    cartAmount: cartState.totalAmount,
-    addItem: addItemHandler,
-    removeItem: removeItemHandler,
+    addItem: addItemToCart,
+    removeItem: removeItemFromCart,
+    increaseQuantity: increaseQuantityOfAItem,
+    decreaseQuantity: decreaseQuantityOfAItem,
   };
 
   return (

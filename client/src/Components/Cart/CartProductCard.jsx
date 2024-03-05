@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./CartProductCard.module.css";
 import QuantityButton from "./QuantityButton";
+import CartContext from "../Store/CartContext";
 
 const CartProductCard = (props) => {
-  const itemRemovalHandler = (event) => {
-    console.log(event);
+  const { cartItems, removeItem } = useContext(CartContext);
+
+  const itemRemovalHandler = () => {
+    removeItem(props.id);
   };
+
   return (
     <div className={styles.productCard}>
       <div className={styles.productImage}>
-        <img src={props.image} alt={props.name}></img>
+        <img src={props.image} alt={props.name} />
       </div>
       <div className={styles.productInfo}>
         <p className={styles.productName}>{props.name}</p>
@@ -18,13 +22,13 @@ const CartProductCard = (props) => {
           {props.price}
           <span className={styles.adjustedMoney}>{props.cents}</span>
         </p>
-        <p className={styles.ratings}>
+        <div className={styles.ratings}>
           {Array(props.rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p key={i}>⭐</p>
             ))}
-        </p>
+        </div>
         <div className={styles.actionButtons}>
           <button
             className={styles.cartProductCardRemoveItem}
@@ -32,7 +36,10 @@ const CartProductCard = (props) => {
           >
             Remove Item
           </button>
-          <QuantityButton></QuantityButton>
+          <QuantityButton
+            id={props.id}
+            quantity={cartItems.find((item) => item.id === props.id)?.quantity}
+          />
         </div>
       </div>
     </div>

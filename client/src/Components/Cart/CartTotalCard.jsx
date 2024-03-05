@@ -5,13 +5,16 @@ import CartContext from "../Store/CartContext";
 const CartTotalCard = (props) => {
   const cartCtx = useContext(CartContext);
 
-  const cartTotal = cartCtx.cartAmount;
-  console.log(cartTotal);
+  const cartTotal = cartCtx.cartItems.reduce((total, item) => {
+    const dollars = item.price * item.quantity;
+    const cents = (item.cents / 100) * item.quantity;
+    return total + dollars + cents;
+  }, 0);
 
   return (
     <div className={styles.CartTotalCard}>
       <p className={styles.header}>
-        Subtotal ({cartCtx.cartItems.length} items) : ${cartTotal}
+        Subtotal ({cartCtx.cartItems.length} items) : ${cartTotal.toFixed(2)}
       </p>
       <div className={styles.input}>
         <input type="checkbox"></input>

@@ -16,6 +16,21 @@
   font-size: 25px;
 }
 
+.cartNoItem{
+  text-align: center;
+}
+
+.emptyCartHeading{
+  font-size: 30px;
+  opacity: 0.5;
+}
+
+.emptyCartFooter{
+  font-weight: bold;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
 @media only screen and (max-width: 600px) {
   .CartItemsCard {
     width: 85%;

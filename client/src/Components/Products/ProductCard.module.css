@@ -36,6 +36,32 @@ p {
   border-top-right-radius: 99px;
   border-top-left-radius: 99px;
   font-weight: 600;
+  transition: 300ms;
+}
+
+.productCardAddToCardButton:hover{
+  background-color: #c8a90a;
+  color: black;
+}
+
+
+.viewProductButton{
+  background-color: #fcd200;
+  color: black;
+  border: none;
+  padding: 10px 10px;
+  margin: auto 10px;
+  border-bottom-left-radius: 99px;
+  border-bottom-right-radius: 99px;
+  border-top-right-radius: 99px;
+  border-top-left-radius: 99px;
+  font-weight: 600;
+  transition: 300ms;
+}
+
+.viewProductButton:hover{
+  background-color: #c8a90a;
+  color: black;
 }
 
 .price {

@@ -1,17 +1,19 @@
 .row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-left: 5px;
   margin-right: 5px;
 }
 
+.ProductCard {
+  flex: 1 0 30%; 
+  margin: 5px; /* Add some margin between items */
+}
 
 @media only screen and (max-width: 600px) {
-  .row{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .productsRow{
-    align-items: center;
+  .row {
+    flex-wrap: wrap; 
+    justify-content: center; 
   }
 }

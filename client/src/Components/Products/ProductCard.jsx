@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import styles from "./ProductCard.module.css";
 import CartContext from "../Store/CartContext";
 
@@ -11,9 +12,11 @@ const ProductCard = (props) => {
       name: props.name,
       price: props.price,
       cents: props.cents,
+      quantity: 1,
       image: props.image,
     });
   };
+
   return (
     <div className={styles.card}>
       <div className={styles.productTitle}>
@@ -25,13 +28,13 @@ const ProductCard = (props) => {
           {props.price}
           <span className={styles.adjustedMoney}>{props.cents}</span>
         </p>
-        <p className={styles.ratings}>
+        <div className={styles.ratings}>
           {Array(props.rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p key={i}>⭐</p>
             ))}
-        </p>
+        </div>
       </div>
       <div className={styles.productImage}>
         <img src={props.image} alt="Product Depiction"></img>
@@ -42,6 +45,24 @@ const ProductCard = (props) => {
           onClick={addToCartHandler}
         >
           Add to cart
+        </button>
+        <button className={styles.viewProductButton}>
+          <Link
+            to={{
+              pathname: `/product/${props.id}`,
+              state: {
+                id: props.id,
+                name: props.name,
+                price: props.price,
+                cents: props.cents,
+                rating: props.rating,
+                image: props.image,
+              },
+            }}
+            className={styles.viewProductButton}
+          >
+            View Product
+          </Link>
         </button>
       </div>
     </div>
